@@ -6,7 +6,7 @@ You're sitting on your couch, dog at your feet, one hand completely immersed in 
 Now let this be warning, this article will not make you an over night Elon Musk and you may not come out of with a fully functioning prototype like other articles on this website. What you will have, is an understanding of what these networks are how they achieve such results.
 
 Assumed is a basic knowledge of convolution neural networks and the math behind them. If you don't have that I recommend saving this tab and watching this video, then coming back.
-
+blogPhotos/correlation.gif
 
 [Learn about Convolutional Networks][0f7dd8c6]
 
@@ -14,6 +14,7 @@ Assumed is a basic knowledge of convolution neural networks and the math behind 
 
 
 <center>![snowmen](blogPhotos/snow-men.jpg)
+
 ## Siamese Overview
 
 Let's consider our end goal as taking a video, selecting a target and tracking it throughout the duration. Now lets peer down the rabbit hold and abstract this. First lets think about exactly what video is. Fundamentally it is just a series of photos or images displayed in rapid succession. So all we are trying to do is find a find a target in every frame of a video and draw a box around it. This sounds eerily similar to everyone's favourite children's book _"Where's Waldo"_.
