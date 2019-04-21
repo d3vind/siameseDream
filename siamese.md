@@ -38,7 +38,7 @@ We already know what a convolutional neural network is so lets look at what make
 ## Fully Convolution Networks
 Fully convolutional indicates that the neural network is composed of convolutional layers without any fully-connected layers at the end of the network.
 
-<center>![conv image](https://i.imgur.com/LiFHufm.png)
+<center>![conv image](blogPhotos/fullyConv.png)
 
 With a fully convolutional implementation the network is learning filters (feature maps) everywhere. Including the final decision making layer.
 In a fully connected layer each neuron is connected to every neuron in the previous layer. Each connection has it's own weight. In a convolutional layer each neuron is only connected to a few nearby local neurons in the previous layer, and the same set of weights is used for every neuron.
@@ -73,7 +73,7 @@ Alright we are really starting to put the pieces together now. Let's think back 
  I know what you're thinking that sounds like a lot of stuff to occur in real time. Thankfully we are saved by math. The reason we can do these operations in real time is because it happens in the [fourier domain](https://betterexplained.com/articles/an-interactive-guide-to-the-fourier-transform/). We don't really need to get into exactly why this works right now. Just know that it allows your machine to compute the operations of all these sliding windows simultaneously, in parallel by the multiple cores of your GPU. This allows us to observe the results almost instantaneously.
 
 
-<center>![Alt Text](https://media.giphy.com/media/YkgoW1fPJr4ovVUGGS/giphy.gif
+<center>![cat correlation](blogPhotos/correlation.gif
 )
 
 
