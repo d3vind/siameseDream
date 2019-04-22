@@ -13,7 +13,7 @@ blogPhotos/correlation.gif
 [0f7dd8c6]: https://www.youtube.com/watch?v=YRhxdVk_sIs "link"
 
 
-<center>![snowmen](blogPhotos/snow-men.jpg)
+![snowmen](blogPhotos/snow-men.jpg)
 
 ## Siamese Overview
 
@@ -25,6 +25,7 @@ Using our eye's and maybe our finger,  we scan the page from left to right looki
 ![tennis](blogPhotos/tennis.gif)
 
 Unfortunately we know our network has a bad memory. We must constantly remind it what the target image (waldo) looks like. For this reason, we need two networks. One to process our image of waldo and one for the entire image we are looking for him. This is where the siamese thing comes in. Just like siamese twins. We build two identical fully convolution networks _(we'll get to the fully convolutional thing later_). The twins job is to process our two images (target and search image) and represent distinct features in two separate feature maps. They are attached in that they perform the same job at the exact same time but are distinct in their inputs.
+
 ![featureMap](blogPhotos/featureMap.gif)
 
 The reason they need to be identical is to represent the features that are shared by both images in the exact same way. This is critical when it comes to comparing to see if we have the real waldo. If we are comparing a feature like his shirt. We must ensure we have shared attributes (size, color, pattern). The only way to preserve this is by moving them through an identical network.
