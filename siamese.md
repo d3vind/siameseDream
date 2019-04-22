@@ -74,7 +74,7 @@ Alright we are really starting to put the pieces together now. Let's think back 
  I know what you're thinking that sounds like a lot of stuff to occur in real time. Thankfully we are saved by math. The reason we can do these operations in real time is because it happens in the [fourier domain](https://betterexplained.com/articles/an-interactive-guide-to-the-fourier-transform/). We don't really need to get into exactly why this works right now. Just know that it allows your machine to compute the operations of all these sliding windows simultaneously, in parallel by the multiple cores of your GPU. This allows us to observe the results almost instantaneously.
 
 
-<center>![cat correlation](blogPhotos/correlation.gif
+<center>![cat correlation](https://github.com/d3vind/siameseDream/blob/master/blogPhotos/correlation.gif?raw=true
 )
 
 
