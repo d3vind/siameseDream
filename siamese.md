@@ -18,11 +18,11 @@ blogPhotos/correlation.gif
 ## Siamese Overview
 
 Let's consider our end goal as taking a video, selecting a target and tracking it throughout the duration. Now lets peer down the rabbit hold and abstract this. First lets think about exactly what video is. Fundamentally it is just a series of photos or images displayed in rapid succession. So all we are trying to do is find a find a target in every frame of a video and draw a box around it. This sounds eerily similar to everyone's favourite children's book _"Where's Waldo"_.
-<center>![waldo](blogPhotos/whereswaldo.gif)
+<center> ![waldo](blogPhotos/whereswaldo.gif)
 
 Using our eye's and maybe our finger,  we scan the page from left to right looking at every face, shirt or feature to see if it matches that of our old pal Waldo. Maybe even drawing a circle around him just to ruin the game for anyone else that might want to try after.  We want to train an algorithm to do exactly that. Find our target and draw a box around it.
 
-<center>![tennis](blogPhotos/tennis.gif)
+<center> ![tennis](blogPhotos/tennis.gif)
 
 Unfortunately we know our network has a bad memory. We must constantly remind it what the target image (waldo) looks like. For this reason, we need two networks. One to process our image of waldo and one for the entire image we are looking for him. This is where the siamese thing comes in. Just like siamese twins. We build two identical fully convolution networks _(we'll get to the fully convolutional thing later_). The twins job is to process our two images (target and search image) and represent distinct features in two separate feature maps. They are attached in that they perform the same job at the exact same time but are distinct in their inputs.
 <center> ![featureMap](blogPhotos/featureMap.gif)
@@ -38,8 +38,10 @@ We already know what a convolutional neural network is so lets look at what make
 
 ## Fully Convolution Networks
 Fully convolutional indicates that the neural network is composed of convolutional layers without any fully-connected layers at the end of the network.
-
+<p align="center">
 ![conv image](blogPhotos/fullyConv.png)
+
+</p>
 
 With a fully convolutional implementation the network is learning filters (feature maps) everywhere. Including the final decision making layer.
 In a fully connected layer each neuron is connected to every neuron in the previous layer. Each connection has it's own weight. In a convolutional layer each neuron is only connected to a few nearby local neurons in the previous layer, and the same set of weights is used for every neuron.
